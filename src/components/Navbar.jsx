@@ -1,11 +1,12 @@
 import "../styles/navbar.css";
+import logo8 from "../assets/logos/logo8.webp"
 
 export default function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-left">
         <img
-          src="https://horizons-cdn.hostinger.com/1a9ce3a2-790f-4baf-8491-30e20f7afc09/ab00b41ca32929e0da248f48c354b6fb.jpg"
+          src={logo8}
           alt="logo"
           className="logo-img"
         />
