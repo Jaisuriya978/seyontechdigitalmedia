@@ -1,4 +1,5 @@
 import { FaLinkedin } from "react-icons/fa";
+import Img5 from "../assets/img5.jpg"
 
 export default function ContactSection() {
   return (
@@ -49,7 +50,7 @@ export default function ContactSection() {
           {/* RIGHT SIDE IMAGE */}
           <div className="contact-image">
             <img
-              src="https://i.pinimg.com/736x/5d/65/c7/5d65c7e38c952c234a871d6c6635ec8a.jpg"
+              src={Img5}
               alt="Contact Seyon Tech"
             />
           </div>

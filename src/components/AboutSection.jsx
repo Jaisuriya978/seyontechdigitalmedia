@@ -1,14 +1,19 @@
 import "../styles/about.css";
 
+import Img1 from "../assets/img1.jpg";
+import Img2 from "../assets/img2.jpg";
+import Img3 from "../assets/img3.jpg"
+import Img4 from "../assets/img4.jpg"
+
 export default function AboutSection() {
   return (
     <section className="hero" id="about">
         <div className="hero-left">
           <div className="image-grid">
-            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" alt="img1" />
-            <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" alt="img2" />
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="img3" />
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="img4" />
+            <img src={Img1} alt="img1" />
+            <img src={Img2} alt="img2" />
+            <img src={Img3} alt="img3" />
+            <img src={Img4} alt="img4" />
           </div>
         </div>
 

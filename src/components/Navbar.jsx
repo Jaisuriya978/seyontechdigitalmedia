@@ -18,7 +18,7 @@ export default function Navbar() {
         <a href="#contact">Contact</a>
       </nav>
 
-      <button className="btn">Get Started</button>
+      <a href="#about"><button className="btn">Get Started</button></a>
     </header>
   );
 }
