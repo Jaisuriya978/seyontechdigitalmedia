@@ -26,13 +26,15 @@ export default function HeroSection() {
         </p>
 
         <div className="hero-btns">
-          <button className="btn-primary-outlined">
+          <a href="#contact"><button className="btn-primary-outlined">
             Let's Talk →
           </button>
+          </a>
 
-          <button className="btn-primary-outlined">
+          <a href="#process"><button className="btn-primary-outlined">
             View Our Work
           </button>
+          </a>
         </div>
       </div>
     </section>
