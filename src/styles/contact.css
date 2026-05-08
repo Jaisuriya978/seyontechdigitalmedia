@@ -1,10 +1,12 @@
-/* CONTACT */
+/* CONTACT SECTION */
 .contact {
   padding: 100px 8%;
   background: #111827;
   color: white;
+  overflow: hidden;
 }
 
+/* HEADER */
 .contact-header {
   text-align: center;
   margin-bottom: 70px;
@@ -13,38 +15,40 @@
 .contact-header h2 {
   font-size: 3rem;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .contact-header p {
-  color: #94a3b8;
   max-width: 700px;
   margin: auto;
+  color: #cbd5e1;
   line-height: 1.8;
+  font-size: 1.05rem;
 }
 
-/* CONTAINER */
+/* MAIN CONTAINER */
 .contact-container {
   display: flex;
-  gap: 50px;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  gap: 60px;
 }
 
-/* LEFT */
+/* LEFT SIDE */
 .contact-info {
-  flex: 1;
+  width: 50%;
 }
 
 .contact-info h3 {
   font-size: 2rem;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .contact-info p {
   margin-bottom: 18px;
-  color: #cbd5e1;
+  color: #d1d5db;
   font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 /* BUTTONS */
@@ -53,12 +57,17 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
+
+  padding: 10px 24px;
   margin-top: 15px;
-  padding: 14px 24px;
+  margin-right: 15px;
+
   border-radius: 14px;
   text-decoration: none;
   color: white;
-  transition: 0.4s ease;
+
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .whatsapp-btn {
@@ -71,33 +80,358 @@
 
 .whatsapp-btn:hover,
 .linkedin-btn:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
-/* IMAGE */
+.whatsapp-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* RIGHT SIDE */
 .contact-image {
-  flex: 1;
+  width: 50%;
   display: flex;
   justify-content: center;
 }
 
 .contact-image img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 24px;
+  max-width: 520px;
+  height: 420px;
+
   object-fit: cover;
+
+  border-radius: 24px;
+
+  display: block;
 }
 
-/* MOBILE */
-@media(max-width: 768px) {
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 70px 5%;
+  }
+
+  .contact-header h2 {
+    font-size: 2.2rem;
+  }
+
   .contact-container {
     flex-direction: column;
     text-align: center;
   }
 
+  .contact-info,
+  .contact-image {
+    width: 100%;
+  }
+
   .contact-info {
     display: flex;
     flex-direction: column;
+   
+  }
+
+  .contact-image img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .whatsapp-btn,
+  .linkedin-btn {
+    justify-content: center;
+    /* width: 100%; */
+    max-width: 320px;
+  }
+}
+
+/* MOBILE BUTTON RESPONSIVE */
+@media (max-width: 768px) {
+
+  .whatsapp-btn,
+  .linkedin-btn {
+    /* width: 30%; */
+    max-width: 220px;
+
+    display: flex;
+    justify-content: center;
     align-items: center;
+
+    padding: 10px 15px;
+
+    font-size: 0.95rem;
+  }
+
+  .whatsapp-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.whatsapp-btn,
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 13px 20px;
+  margin-top: 15px;
+  margin-right: 15px;
+
+  border-radius: 14px;
+  text-decoration: none;
+  color: white;
+
+  font-weight: 600;
+  transition: 0.3s ease;
+
+  flex-wrap: wrap;
+  text-align: center;
+}
+/* APPOINTMENT CARD */
+.appt-card {
+  flex: 1;
+  background: var(--bg-card);
+  border-radius: 20px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  padding: 28px;
+}
+
+.appt-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.appt-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(139, 92, 246, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--primary);
+}
+
+.appt-header h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 2px; }
+.appt-header p  { font-size: 0.82rem; color: var(--text-muted); }
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 100%;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--primary); }
+
+.form-group textarea { resize: none; height: 80px; }
+
+.book-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  transition: var(--transition);
+}
+
+.book-btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+
+.secure-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* INFO ITEMS */
+.info-item { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.info-icon {
+  width: 42px; height: 42px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+}
+.icon-mail  { background: rgba(139,92,246,0.15); color: var(--primary); }
+.icon-phone { background: rgba(59,130,246,0.15);  color: var(--secondary); }
+.icon-loc   { background: rgba(139,92,246,0.1);   color: var(--primary); }
+.icon-clock { background: rgba(59,130,246,0.1);   color: var(--secondary); }
+.info-text strong { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 2px; }
+.info-text span   { font-size: 0.95rem; color: var(--text-main); }
+.btn-row { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+
+/* CUSTOM SELECT */
+.custom-select-wrapper {
+  position: relative;
+}
+
+.custom-select-wrapper select {
+  /* background: #1a1030;        
+  border: 1px solid rgba(139, 92, 246, 0.4); */
+  border-radius: 10px;
+  padding: 10px 36px 10px 14px;
+  color: #F8FAFC;
+  font-size: 0.9rem;
+  width: 100%;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+/* .custom-select-wrapper select:focus {
+  border-color: #8B5CF6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+} */
+
+.custom-select-wrapper select option {
+  background: #1a1030;
+  color: #F8FAFC;
+}
+
+.custom-select-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #8B5CF6;
+  pointer-events: none;
+}
+
+/* CONTACT INFO — MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+  .contact-container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .contact-info {
+    width: 100%;
+    text-align: left;
+  }
+
+  .contact-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  /* FIX: icon + text row always stays horizontal */
+  .info-item {
+    display: flex;
+    flex-direction: row;          /* keep icon & text side by side */
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+
+  .info-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;              /* prevent icon from shrinking */
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+
+  .info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;      /* label + value left-aligned */
+    text-align: left;
+  }
+
+  .info-text strong {
+    font-size: 0.72rem;
+    margin-bottom: 2px;
+  }
+
+  .info-text span {
+    font-size: 0.92rem;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  /* BUTTONS — side by side on mobile */
+  .btn-row {
+    display: flex;
+    flex-direction: row;          /* side by side */
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .whatsapp-btn,
+  .linkedin-btn {
+    flex: 1;                      /* equal width */
+    min-width: 140px;
+    justify-content: center;
+    padding: 12px 10px;
+    font-size: 0.88rem;
+    border-radius: 12px;
+    margin: 0;                    /* remove old margins */
+  }
+}
+
+/* Very small screens — stack buttons */
+@media (max-width: 360px) {
+  .btn-row {
+    flex-direction: column;
+  }
+
+  .whatsapp-btn,
+  .linkedin-btn {
+    width: 100%;
   }
 }
