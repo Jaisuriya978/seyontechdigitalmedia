@@ -1544,7 +1544,7 @@ html {
 .hero-btns {
   display: flex;
   gap: 20px;
-  margin-left: 250px;
+  margin-left: 150px;
 }
 
 .btn-primary-outlined {
