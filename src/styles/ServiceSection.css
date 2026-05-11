@@ -1,0 +1,140 @@
+/* =======================
+   SERVICES SECTION
+======================= */
+
+.services {
+  padding: 80px 8%;
+  background: #0b0b0f;
+}
+
+/* HEADER */
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-header h2 {
+  font-size: 42px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.services-header p {
+  color: #9ca3af;
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* CARD */
+.service-card {
+  position: relative;
+  height: 320px;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: transform 0.3s ease;
+  isolation: isolate;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+/* DARK OVERLAY */
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  z-index: 1;
+}
+
+/* CONTENT */
+.service-card-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 20px;
+  color: whitesmoke;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* ICON */
+.service-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #8b5cf6;
+  color: #fff;
+
+  margin-bottom: 14px;
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* TEXT */
+.service-card h3 {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: white;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* BACKGROUND IMAGES */
+.bg-ai {
+  background-image: url("../assets/AI Automation.avif");
+}
+
+.bg-ads {
+  background-image: url("../assets/AI Automation.avif");
+}
+
+.bg-social {
+  background-image: url("../assets/AI Automation.avif");
+}
+
+.bg-funnels {
+  background-image: url("../assets/AI Automation.avif");
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .services {
+    padding: 60px 5%;
+  }
+
+  .services-header h2 {
+    font-size: 32px;
+  }
+
+  .service-card {
+    height: 280px;
+  }
+}

@@ -12,8 +12,9 @@ body{
 
 .text-gradient{
   background: linear-gradient(to right,#8b5cf6,#3b82f6);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btn{
@@ -252,6 +253,9 @@ html {
 
 
 /* SERVICES SECTION */
+/* =========================
+   SERVICES
+========================= */
 .services {
   padding: 80px 40px;
   text-align: center;
@@ -267,14 +271,18 @@ html {
   margin-bottom: 40px;
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-/* CARD */
+/* =========================
+   CARD
+========================= */
 .service-card {
   background: #0f172a;
   padding: 30px;
@@ -286,24 +294,36 @@ html {
   cursor: pointer;
 }
 
-/* ICON */
+/* =========================
+   ICON
+========================= */
 .service-card .icon {
   font-size: 40px;
   margin-bottom: 15px;
 }
 
-/* HOVER EFFECT 🔥 */
+/* =========================
+   HOVER EFFECT
+========================= */
 .service-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* GRADIENT GLOW */
+/* =========================
+   GRADIENT GLOW
+========================= */
 .service-card::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, #007bff, #00c6ff);
+
+  background: linear-gradient(
+    120deg,
+    #007bff,
+    #00c6ff
+  );
+
   opacity: 0;
   transition: 0.4s;
   z-index: 0;
@@ -313,13 +333,23 @@ html {
   opacity: 0.08;
 }
 
-/* TEXT ABOVE GRADIENT */
-.service-card * {
+/* =========================
+   ONLY TEXT ABOVE GLOW
+========================= */
+
+/* REMOVE THE OLD * SELECTOR */
+
+.service-card h3,
+.service-card p,
+.service-card .icon,
+.service-card button {
   position: relative;
   z-index: 1;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 900px) {
   .service-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -472,6 +502,7 @@ html {
   }
 }
 
+/* GRID */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -480,7 +511,7 @@ html {
 }
 
 /* CARD BASE */
-.service-card {
+.services-grid .service-card {
   background: #0f0f0f;
   border: 1px solid #222;
   border-radius: 16px;
@@ -491,67 +522,81 @@ html {
   cursor: pointer;
 }
 
-/* HOVER EFFECT 🔥 */
-.service-card:hover {
+/* HOVER */
+.services-grid .service-card:hover {
   transform: translateY(-8px);
   border-color: #6c5ce7;
   box-shadow: 0 10px 30px rgba(108, 92, 231, 0.2);
 }
 
 /* ICON */
-.icon {
+.services-grid .icon {
   width: 50px;
   height: 50px;
   border-radius: 12px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 22px;
   margin-bottom: 15px;
 }
 
-.icon.purple { background: linear-gradient(135deg, #a855f7, #6366f1); }
-.icon.blue { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
-.icon.orange { background: linear-gradient(135deg, #f97316, #ef4444); }
-.icon.green { background: linear-gradient(135deg, #22c55e, #10b981); }
+.services-grid .icon.purple {
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+}
+
+.services-grid .icon.blue {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+
+.services-grid .icon.orange {
+  background: linear-gradient(135deg, #f97316, #ef4444);
+}
+
+.services-grid .icon.green {
+  background: linear-gradient(135deg, #22c55e, #10b981);
+}
 
 /* TEXT */
-.service-card h3 {
+.services-grid .service-card h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.service-card p {
+.services-grid .service-card p {
   color: #aaa;
 }
 
-/* DETAILS (hidden by default) */
-.card-details {
+/* DETAILS */
+.services-grid .card-details {
   max-height: 0;
   overflow: hidden;
   transition: 0.4s ease;
   margin-top: 15px;
 }
 
-.service-card.active .card-details {
+.services-grid .service-card.active .card-details {
   max-height: 200px;
 }
 
 /* LIST */
-.card-details ul {
+.services-grid .card-details ul {
   padding-left: 18px;
   color: #ccc;
 }
 
-.card-details li {
+.services-grid .card-details li {
   margin-bottom: 6px;
 }
 
-/* CLICK EFFECT */
-.service-card.active {
+/* ACTIVE */
+.services-grid .service-card.active {
   border-color: #6c5ce7;
   box-shadow: 0 0 30px rgba(110, 92, 231, 0.2);
 }
+
 
 /* SECTION */
 .why {
@@ -4484,6 +4529,236 @@ body {
 
 /* HIDE EVERYTHING */
 .service-card:hover .card-content {
-  opacity: 0;
+  
   transform: translateY(20px);
+}
+
+.services-modern {
+  padding: 90px 10%;
+  background: #0b0b0f;
+  text-align: center;
+}
+
+/* HEADER */
+.services-header h2 {
+  font-size: 42px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.services-header p {
+  color: #9ca3af;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 60px;
+  line-height: 1.7;
+}
+
+/* GRID */
+.services-modern-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.service-modern-card {
+  position: relative;
+  border-radius: 24px;
+  background: #111827;
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+
+.service-modern-card:hover {
+  transform: translateY(-10px);
+  border-color: #8b5cf6;
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
+}
+
+
+/* IMAGE CONTAINER */
+.service-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px 24px 0 0;
+  background: #111827;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* HOVER EFFECT */
+.service-modern-card:hover .service-img {
+  transform: scale(1.08);
+}
+
+/* ICON */
+.service-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(139, 92, 246, 0.9);
+  color: white;
+
+  z-index: 10;
+}
+/* COLORS */
+.blue {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+
+.purple {
+  background: rgba(168, 85, 247, 0.2);
+  color: #a855f7;
+}
+
+.orange {
+  background: rgba(249, 115, 22, 0.2);
+  color: #f97316;
+}
+
+.green {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+/* CONTENT */
+.service-content {
+  padding: 30px;
+  text-align: left;
+}
+
+.service-content h3 {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.service-content p {
+  color: #9ca3af;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  font-size: 15px;
+}
+
+/* BUTTON */
+.service-btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.service-btn:hover {
+  transform: scale(1.05);
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+
+  .services-modern-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-header h2 {
+    font-size: 36px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .services-modern {
+    padding: 70px 6%;
+  }
+
+  .service-image {
+    height: 240px;
+  }
+
+  .service-content {
+    padding: 24px;
+  }
+
+  .service-content h3 {
+    font-size: 24px;
+  }
+
+  .services-header h2 {
+    font-size: 30px;
+  }
+
+  .services-header p {
+    font-size: 14px;
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+
+  .service-image {
+    height: 200px;
+  }
+
+  .service-content h3 {
+    font-size: 22px;
+  }
+
+  .service-content p {
+    font-size: 14px;
+  }
+
+  .service-btn {
+    width: 100%;
+  }
+}
+
+/* FORCE IMAGE VISIBILITY */
+.service-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* FORCE ICON VISIBILITY */
+.service-icon {
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 999 !important;
 }

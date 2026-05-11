@@ -1,115 +1,75 @@
 import { Bot, Target, Share2, Layout } from "lucide-react";
-import aiAutomationImg from "../assets/service-ai-automation.png";
-import paidAdsImg from "../assets/service-pais-ads.png";
-import socialMediaImg from "../assets/service-social-media.png";
-import websiteFunnelsImg from "../assets/service-website-funnels.png";
+import aiAutomationImg from "../assets/AI Automation.avif";
+import paidAdsImg from "../assets/AI Automation.avif";
+import socialMediaImg from "../assets/AI Automation.avif";
+import websiteFunnelsImg from "../assets/AI Automation.avif";
 
+import "../styles/ServiceSection.css";
 
 const services = [
   {
-    icon: <Bot size={32} />,
+    icon: <Bot size={38} />,
     title: "AI Automation Marketing",
-    description:
-      "Leverage AI to automate your marketing and sales processes for maximum efficiency.",
+    desc: "Automate your sales and customer engagement using AI-powered workflows.",
     image: aiAutomationImg,
-    featuresTitle: "Key Features:",
-    features: [
-      "WhatsApp Automation for engagement",
-      "AI Chatbot for 24/7 support",
-      "CRM & Lead Management",
-      "AI-Based Follow-up Systems",
-    ],
+    color: "purple",
+     bgClass: "ai-bg",
   },
   {
-    icon: <Target size={32} />,
+    icon: <Target size={38} />,
     title: "Paid Ads Management",
-    description: "Data-driven advertising campaigns that deliver measurable ROI.",
+    desc: "Run high-converting Google, Meta & YouTube advertising campaigns.",
     image: paidAdsImg,
-    featuresTitle: "Channels & Strategy:",
-    features: [
-      "Google Ads for high-intent search",
-      "YouTube Lead Generation",
-      "Facebook & Instagram Precision",
-      "Transparent ROI Reporting",
-    ],
+    color: "purple",
+      bgClass: "ads-bg",
   },
   {
-    icon: <Share2 size={32} />,
+    icon: <Share2 size={38} />,
     title: "Social Media Marketing",
-    description: "Build a powerful brand presence across all social platforms.",
+    desc: "Build a strong online brand with creative content and strategy.",
     image: socialMediaImg,
-    featuresTitle: "Brand Growth:",
-    features: [
-      "Tailored Content Strategy",
-      "Professional Poster & Video",
-      "Strategic Brand Positioning",
-      "Complete Page Management",
-    ],
+    color: "purple",
+      bgClass: "social-bg",
   },
   {
-    icon: <Layout size={32} />,
+    icon: <Layout size={38} />,
     title: "Website & Funnels",
-    description: "High-converting systems that turn visitors into customers.",
+    desc: "Modern websites and lead funnels designed for conversions.",
     image: websiteFunnelsImg,
-    featuresTitle: "Web Solutions:",
-    features: [
-      "Professional Business Sites",
-      "Smart Lead Capture Systems",
-      "E-commerce Solutions",
-      "Conversion Optimization",
-    ],
+    color: "purple",
+      bgClass: "funnels-bg",
   },
 ];
 
-export default function ServicesSection() {
+export default function ServicesModern() {
   return (
-    <section className="services" id="services">
-      <h2 className="fade-up">Our Services</h2>
-      <p className="fade-up delay-1">
-        Everything you need to grow your business with digital & AI solutions
-      </p>
+    <>
+      <section className="services" id="services">
+        <div className="services-header">
+          <h2 className="fade-up">Our Services</h2>
+          <p className="fade-up delay-1">
+            Everything you need to grow your business with digital & AI solutions
+          </p>
+        </div>
 
-      <div className="services-grid main-services">
-        {services.map((service) => (
-          <div className="service-card interactive" key={service.title}>
-            <div className="card-inner">
-              <div className="card-media">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  loading="lazy"
-                  width={1024}
-                  height={640}
-                />
-              </div>
-
-              <div className="card-content">
-
-                <div className="icon-box blue">
-                  {service.icon}
-                </div>
-
+        <div className="services-grid">
+          {services.map((service) => (
+            <div
+              className={`service-card ${service.bgClass}`}
+              key={service.title}
+              style={{ backgroundImage: `url(${service.image})` }}
+            >
+              <div className="service-overlay"></div>
+              <div className="service-card-inner">
+                <div className="service-icon-wrapper">{service.icon}</div>
                 <h3>{service.title}</h3>
-
-                <p className="main-desc">
-                  {service.description}
-                </p>
-
-                <div className="card-features">
-                  <h4>{service.featuresTitle}</h4>
-
-                  <ul>
-                    {service.features.map((feature) => (
-                      <li key={feature}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
-
+                <p>{service.desc}</p>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
+
