@@ -64,6 +64,9 @@ export default function ServicesModern() {
                 <div className="service-icon-wrapper">{service.icon}</div>
                 <h3>{service.title}</h3>
                 <p>{service.desc}</p>
+                <button className="service-explore-btn">
+                Explore More
+              </button>
               </div>
             </div>
           ))}
